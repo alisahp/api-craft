@@ -32,17 +32,6 @@ phases:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
 
-reports:
-  arn:aws:codebuild:us-east-1:984969484288:project/craft1
-    files:
-      - "**/*"
-    base-directory: 'target/tests/reports'
-    discard-paths: no
-  reportGroupCucumberJson:
-    files:
-      - 'cucumber/target/cucumber-tests.xml'
-    discard-paths: yes
-    file-format: CucumberJson # default is JunitXml
 artifacts:
   files:
     - target/messageUtil-1.0.jar
