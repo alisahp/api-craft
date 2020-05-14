@@ -33,7 +33,7 @@ phases:
       - echo Build completed on `date`
 
 reports:
-  arn:aws:codebuild:your-region:your-aws-account-id:report-group/report-group-name-1:
+  arn:aws:codebuild:us-east-1:984969484288:project/craft1
     files:
       - "**/*"
     base-directory: 'target/tests/reports'
