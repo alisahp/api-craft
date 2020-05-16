@@ -1,0 +1,12 @@
+version: 0.0
+os: windows
+files:
+  - source: /
+    destination: C:\inetpub\wwwroot
+hooks:
+   BeforeInstall:
+     - location: CodeDeploy/appstop.bat       
+       runas: administrator
+   ApplicationStart:
+     - location: CodeDeploy/appstart.bat       
+       runas: administrator
