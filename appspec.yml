@@ -1,10 +1,9 @@
 version: 0.0
 os: windows
 files:
-  - source: \
-    destination: C:\temp\WebApp\MusicWorld
-  
+  - source: \index.html
+    destination: c:\inetpub\wwwroot
 hooks:
   BeforeInstall:
-    - location: .\StageArtifact.ps1
-    - location: .\CreateWebSite.ps1
+    - location: \before-install.bat
+      timeout: 900
