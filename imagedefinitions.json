@@ -1,0 +1,21 @@
+{
+  "taskDefinition": {
+    "family": "craft",
+    "containerDefinitions": [
+      {
+        "name": "craft",
+        "image": "984969484288.dkr.ecr.us-east-1.amazonaws.com/my-ecs-container:latest",
+        "cpu": 100,
+        "portMappings": [
+          {
+            "protocol": "tcp",
+            "containerPort": 80,
+            "hostPort": 80
+          }
+        ],
+        "memory": 128,
+        "essential": true
+      }
+    ]
+  }
+}
